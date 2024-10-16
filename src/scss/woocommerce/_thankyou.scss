@@ -1,0 +1,174 @@
+.woocommerce-thankyou-order {
+    max-width: 980px;
+    margin: 0 auto;
+
+    ul {
+        padding: 0;
+        margin: 20px 0;
+
+        li {
+            @include font($f1, 400, 14px, $black);
+
+            strong {
+                @include font($f1, 700, 12px, $black, true);
+            }
+        }
+    }
+
+    p {
+        font-family: $f1;
+    }
+
+    h2 {
+        @include font($f1, 700, 20px, $black, true);
+        margin: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 20px;
+
+        .title {
+            font-family: $f1;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        a {
+            margin-bottom: 30px;
+            color: rgb(0, 98, 255);
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: 30px;
+                font-family: $f1;
+            }
+
+            span {
+                font-family: $f1;
+            }
+        }
+    }
+
+    .sub {
+        p {
+            display: none;
+        }
+        table {
+            thead {
+                tr {
+                    th {
+                        // Styles for the cart-subtotal class
+                        @include font($f2, 600, 20px, $black, true);
+                    }
+
+                    td {
+                        // Styles for the cart-subtotal class
+                        @include font($f2, 400, 16px, $black, true);
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    th {
+                        // Styles for the cart-subtotal class
+                        @include font($f2, 600, 20px, $black, true);
+                    }
+
+                    td {
+                        // Styles for the cart-subtotal class
+                        @include font($f2, 400, 16px, $black, true);
+                        .woocommerce-button {
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            tfoot {
+                tr {
+                    th {
+                        // Styles for the cart-subtotal class
+                        @include font($f2, 600, 20px, $black, true);
+                    }
+
+                    td {
+                        // Styles for the cart-subtotal class
+                        @include font($f2, 400, 16px, $black, true);
+                    }
+                }
+            }
+        }
+    }
+
+    .woocommerce-order-details {
+        table,
+        h2 {
+            display: none;
+        }
+
+        .woocommerce-orders-table--subscriptions {
+            display: table;
+        }
+
+        table {
+            thead {
+                tr {
+                    th {
+                        // Styles for the cart-subtotal class
+                        @include font($f2, 600, 20px, $black, true);
+                    }
+
+                    td {
+                        // Styles for the cart-subtotal class
+                        @include font($f2, 400, 16px, $black, true);
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    th {
+                        // Styles for the cart-subtotal class
+                        @include font($f2, 600, 20px, $black, true);
+                    }
+
+                    td {
+                        // Styles for the cart-subtotal class
+                        @include font($f2, 400, 16px, $black, true);
+                    }
+                }
+            }
+
+            tfoot {
+                tr {
+                    th {
+                        // Styles for the cart-subtotal class
+                        @include font($f2, 600, 20px, $black, true);
+                    }
+
+                    td {
+                        // Styles for the cart-subtotal class
+                        @include font($f2, 400, 16px, $black, true);
+                    }
+                }
+            }
+        }
+    }
+
+    .woocommerce-customer-details {
+        address {
+            @include font($f1, 500, 16px, $black, true);
+        }
+    }
+}

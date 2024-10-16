@@ -1,0 +1,54 @@
+.quotes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid $black;
+    border-left: none;
+    border-right: none;
+
+    margin-bottom: 45px;
+    
+    @include responsive(md) {
+        grid-template-columns: 1fr;
+        border-bottom: none;
+    }
+
+    .quote {
+        border-right: 1px solid $black;
+        padding: 20px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+        
+        @include responsive(md) {
+            border-right: none;
+            border-bottom: 1px solid $black;
+        }
+
+        .icon {
+            svg {
+                width: 60px;
+                fill: $black;
+            }
+        }
+
+        .quote-msg{
+            font-weight: 700;
+            font-family: $f2;
+            line-height: 36px;
+            font-size: 20px;
+        }
+
+        .author{
+            font-weight: 700;
+            font-family: $f1;
+            font-size: 23px;
+        }
+
+        &:nth-child(3n+1) {
+            border-left: 1px solid $black;
+        }
+    }
+}

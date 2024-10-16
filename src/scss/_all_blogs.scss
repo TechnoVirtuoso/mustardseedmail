@@ -1,0 +1,39 @@
+.all_blogs {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    @include responsive(sm) {
+        grid-template-columns: 1fr;
+    }
+    .blog {
+        border: 1px solid black;
+        .wrap-featured-image {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .content_wrap {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .date {
+                @include font($f1, 400, 14px, $black, true);
+                letter-spacing: 2px;
+            }
+            .post_title {
+                text-decoration: none;
+                @include font($f1, 700, 20px, $black, true);
+                letter-spacing: 2px;
+            }
+            .description {
+                @include font($f1, 400, 16px, rgb(99, 99, 99), true);
+                letter-spacing: 2px;
+            }
+        }
+    }
+}

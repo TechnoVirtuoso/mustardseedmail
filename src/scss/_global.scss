@@ -1,0 +1,88 @@
+* {
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+sup,
+sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+
+sub {
+    top: 0.4em;
+}
+
+script {
+    display: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    &::-webkit-scrollbar {
+        // display: none;
+    }
+}
+
+body {
+    position: relative;
+}
+
+.main-wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.section-wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.select2-container {
+    li {
+        @include font($f2, 600, 16px, $black);
+    }
+}
+
+@mixin input_select() {
+    p {
+        label {
+            @include font($f2, 600, 16px, $black);
+        }
+        .select2-container .select2-selection--single {
+            height: 40px !important;
+        }
+
+        .select2-container--default
+            .select2-selection--single
+            .select2-selection__arrow {
+            height: 40px !important;
+        }
+
+        .select2-container--default
+            .select2-selection--single
+            .select2-selection__rendered {
+            line-height: 40px !important;
+            @include font($f2, 600, 16px, $black);
+        }
+    }
+    input,
+    textarea {
+        padding: 10px;
+        border: 2px solid $black;
+        border-radius: 6px;
+        resize: none;
+    }
+
+    textarea {
+        height: 120px;
+    }
+}

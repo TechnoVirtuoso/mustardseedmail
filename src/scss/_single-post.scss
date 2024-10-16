@@ -1,0 +1,97 @@
+.single-post {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    .profile-head {
+        .user {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            .image {
+                img {
+                    border-radius: 50%;
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+            .name,
+            .date,
+            .read-time {
+                @include font($f1, 400, 16px, $black, true);
+				letter-spacing: 2px;
+                @include responsive(md) {
+                    @include font($f1, 400, 14px, $black, true);
+                }
+            }
+        }
+    }
+    .title {
+        @include font($f1, 400, 45px, $black, true);
+        letter-spacing: 2px;
+        padding: 20px 0;
+    }
+    .banner {
+        margin-top: 30px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 0.3fr 1fr;
+        gap: 30px;
+        @include responsive(md) {
+            grid-template-columns: 0.5fr 1fr;
+        }
+        @include responsive(sm) {
+            grid-template-columns: 1fr;
+        }
+        .image {
+            img {
+                width: 100%;
+            }
+        }
+        .description {
+            @include font($f1, 400, 25px, $black);
+            letter-spacing: 2px;
+            line-height: 1.5;
+            @include responsive(md) {
+                font-size: 16px;
+            }
+        }
+    }
+    .post-content {
+        @include font($f1, 400, 16px, $black, true);
+        letter-spacing: 2px;
+        padding: 50px 0;
+    }
+    .categories {
+		margin-bottom: 25px;
+        ul {
+            display: flex;
+            gap: 10px;
+            padding: 0;
+            li {
+                list-style: none;
+                a {
+                    display: block;
+                    padding: 10px 15px;
+                    border: 1px solid rgb(83, 83, 83);
+                    text-decoration: none;
+                    @include font($f1, 400, 16px, $black, true);
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+		padding: 15px 0;
+        svg {
+            width: 30px;
+        }
+    }
+    .actions {
+        @include font($f1, 400, 16px, $black, true);
+        letter-spacing: 2px;
+    }
+}

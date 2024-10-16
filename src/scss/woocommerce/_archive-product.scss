@@ -1,0 +1,277 @@
+.shop-page {
+    .subscriptions {
+        background-color: $black;
+        padding: 30px 20px;
+        .title {
+            text-align: center;
+            color: white;
+            font-size: 56px;
+            font-family: $f1;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-bottom: 20px;
+
+            @include responsive(md) {
+                font-size: 25px;
+            }
+        }
+        .subscriptions-wrapper {
+            max-width: 980px;
+            margin: 0 auto;
+
+            /* the slides */
+            .slick-slide {
+                margin: 0 20px;
+            }
+            .slick-arrow {
+                all: unset;
+                cursor: pointer;
+                &.leftButton {
+                    position: absolute;
+                    left: -10px;
+                    top: 50%;
+                    transform: translateX(-50%);
+                }
+                &.rightButton {
+                    position: absolute;
+                    right: -10px;
+                    top: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .subscription {
+                .image {
+                    position: relative;
+                    overflow: hidden;
+                    .tag {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                        background-color: $yellow;
+                        margin: 0;
+                        padding: 8px 15px;
+                        color: white;
+                        font-family: $f1;
+                    }
+                    .quickView {
+                        background-color: rgba(255, 255, 255, 0.75);
+                        position: absolute;
+                        left: 0;
+                        width: 100%;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: $f1;
+                        font-weight: 400;
+                        font-size: 14px;
+                        z-index: 5;
+                        transition: all 0.3s ease-in-out;
+                        cursor: pointer;
+                    }
+                    img {
+                        width: 100%;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover {
+                        img {
+                            transform: scale(1.5);
+                        }
+                        .quickView {
+                            transform: translateY(-50px);
+                        }
+                    }
+                }
+                .sub-content {
+                    padding-top: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .name {
+                        text-align: center;
+                        font-family: $f1;
+                        font-weight: 700;
+                        font-size: 25px;
+                        color: white;
+                        text-decoration: none;
+                    }
+                    .price {
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: white;
+                        text-decoration: none;
+                    }
+                    button {
+                        padding: 10px;
+                        background-color: $orange;
+                        border-radius: 5px;
+                        border: none;
+                        color: white;
+                        width: 100%;
+                        transition: all 0.3s ease-in-out;
+
+                        margin-top: 5px;
+
+                        font-size: 15px;
+                        font-weight: 400;
+                        font-family: $f1;
+
+                        span.load {
+                            display: none;
+                        }
+
+                        &.loading {
+                            span.simple {
+                                display: none;
+                            }
+
+                            span.load {
+                                display: block;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: $yellow;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .products {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        padding: 0 20px;
+
+        max-width: 980px;
+        margin: 0 auto;
+        margin-top: 30px;
+
+        @include responsive(lg) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include responsive(sm) {
+            grid-template-columns: 1fr;
+        }
+
+        .product {
+            list-style: none;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+                rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            cursor: pointer;
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+
+            &.subscription-product {
+                order: -1;
+            }
+
+            &:hover {
+                .image {
+                    img {
+                        transform: scale(1.5);
+                    }
+                    .quickView {
+                        transform: translateY(-50px);
+                    }
+                }
+            }
+
+            .image {
+                flex: 1;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                position: relative;
+
+                .quickView {
+                    background-color: rgba(255, 255, 255, 0.75);
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: $f1;
+                    font-weight: 400;
+                    font-size: 14px;
+                    z-index: 5;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+
+            &-content {
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                position: relative;
+                z-index: 10;
+                background: white;
+
+                &-wrapper {
+                    all: unset;
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .title,
+                        .price {
+                            font-family: $f1;
+                            font-size: 16px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                button {
+                    padding: 15px;
+                    background-color: $black;
+                    border: none;
+                    color: white;
+                    transition: all 0.3s ease-in-out;
+
+                    font-size: 15px;
+                    font-weight: 400;
+                    font-family: $f1;
+
+                    span.load {
+                        display: none;
+                    }
+
+                    &.loading {
+                        span.simple {
+                            display: none;
+                        }
+
+                        span.load {
+                            display: block;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: $yellow;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+

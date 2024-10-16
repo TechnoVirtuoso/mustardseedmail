@@ -1,0 +1,369 @@
+.checkout-page {
+    padding: 0 20px;
+    .woocommerce {
+        &-notices-wrapper {
+            display: none;
+        }
+
+        &-form-coupon-toggle {
+            display: none;
+        }
+
+        .checkout_coupon {
+            &.woocommerce-form-coupon {
+                // Styles for the woocommerce-form-coupon class
+
+                p {
+                    &.form-row {
+                        &.form-row-first {
+                            // Styles for the form-row-first class
+                        }
+
+                        &.form-row-last {
+                            // Styles for the form-row-last class
+                        }
+                    }
+
+                    &.form-row-wide {
+                        // Styles for the form-row-wide class
+                    }
+                }
+
+                button {
+                    &.button {
+                        // Styles for the button class
+                    }
+                }
+
+                .clear {
+                    // Styles for the clear class
+                }
+            }
+        }
+        &-form-login-toggle {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+        &-form-login {
+            margin: 0 auto !important;
+            margin-bottom: 40px !important;
+            .head {
+                p {
+                    @include font($f2, 600, 20px, $black);
+                }
+            }
+            .lost_password {
+                a {
+                    font-family: $f2;
+                }
+            }
+            @include input_select();
+        }
+
+        &-notices-wrapper {
+            // Styles for the woocommerce-notices-wrapper class
+        }
+
+        form {
+            max-width: 940px;
+            margin: 0 auto;
+            &.checkout {
+                .button {
+                    background-color: $orange;
+                    font-family: $f1;
+                }
+                &.woocommerce-checkout {
+                    // Styles for the checkout class
+                    @include input_select();
+                    #customer_details {
+                        &.col2-set {
+                            .col-1,
+                            .col-2 {
+                                float: none;
+                                width: 100%;
+                                background-color: #57575731;
+                                padding: 20px;
+                            }
+                            h3 {
+                                @include font($f2, 600, 35px, $black);
+                                line-height: 1;
+                                border-bottom: 5px solid black;
+                                margin: 0;
+                                padding-bottom: 12px;
+                                margin-bottom: 12px;
+                            }
+
+                            .col-2 {
+                                margin-top: 33px;
+                                #ship-to-different-address-checkbox {
+                                    // display: none;
+                                }
+                            }
+
+                            .woocommerce-billing-fields__field-wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+
+                                .form-row {
+                                    width: 100%;
+                                }
+
+                                #billing_first_name_field {
+                                    // Styles for the billing_first_name_field ID
+                                    float: none;
+
+                                    label {
+                                    }
+
+                                    span {
+                                        input {
+                                        }
+                                    }
+                                }
+
+                                #billing_last_name_field {
+                                    // Styles for the billing_last_name_field ID
+                                    float: none;
+
+                                    label {
+                                    }
+
+                                    span {
+                                        input {
+                                        }
+                                    }
+                                }
+
+                                #billing_company_field {
+                                    // Styles for the billing_company_field ID
+                                    label {
+                                    }
+
+                                    span {
+                                        input {
+                                        }
+                                    }
+                                }
+
+                                #billing_country_field {
+                                    // Styles for the billing_country_field ID
+                                    label {
+                                    }
+
+                                    span {
+                                        input {
+                                        }
+                                    }
+                                }
+
+                                #billing_address_1_field {
+                                    // Styles for the billing_address_1_field ID
+                                    label {
+                                    }
+
+                                    span {
+                                        input {
+                                        }
+                                    }
+                                }
+
+                                #billing_address_2_field {
+                                    // Styles for the billing_address_2_field ID
+                                    label {
+                                    }
+
+                                    span {
+                                        input {
+                                        }
+                                    }
+                                }
+
+                                #billing_city_field {
+                                    // Styles for the billing_city_field ID
+                                    label {
+                                    }
+
+                                    span {
+                                        input {
+                                        }
+                                    }
+                                }
+
+                                #billing_state_field {
+                                    // Styles for the billing_state_field ID
+                                    label {
+                                    }
+
+                                    span {
+                                        input {
+                                        }
+                                    }
+                                }
+
+                                #billing_postcode_field {
+                                    // Styles for the billing_postcode_field ID
+                                    label {
+                                    }
+
+                                    span {
+                                        input {
+                                        }
+                                    }
+                                }
+
+                                #billing_phone_field {
+                                    // Styles for the billing_phone_field ID
+                                    label {
+                                    }
+
+                                    span {
+                                        input {
+                                        }
+                                    }
+                                }
+
+                                #billing_email_field {
+                                    // Styles for the billing_email_field ID
+                                    label {
+                                    }
+
+                                    span {
+                                        input {
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #place_order {
+                margin-top: 30px;
+                width: 100%;
+                padding: 10px 0;
+            }
+        }
+
+        #order_review_heading {
+            // Styles for the order_review_heading ID
+            @include font($f2, 600, 35px, $black);
+            line-height: 0;
+        }
+
+        #order_review {
+            margin: 20px 0;
+            background-color: #57575731;
+            padding: 20px;
+            h3 {
+                @include font($f2, 600, 35px, $black);
+                line-height: 1;
+                border-bottom: 5px solid black;
+                margin: 0;
+                padding-bottom: 12px;
+                margin-bottom: 12px;
+            }
+            &.woocommerce-checkout-review-order {
+                table {
+                    thead {
+                        tr {
+                            th {
+                                // Styles for the cart-subtotal class
+                                @include font($f2, 600, 20px, $black, true);
+                            }
+
+                            td {
+                                // Styles for the cart-subtotal class
+                                @include font($f2, 400, 16px, $black, true);
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            th {
+                                // Styles for the cart-subtotal class
+                                @include font($f2, 600, 20px, $black, true);
+                            }
+
+                            td {
+                                // Styles for the cart-subtotal class
+                                @include font($f2, 400, 16px, $black, true);
+                            }
+                        }
+                    }
+
+                    tfoot {
+                        tr {
+                            &.cart-subtotal,
+                            &.order-total,
+                            &.recurring-totals {
+                                display: none;
+                            }
+                            &.order-total.recurring-total {
+                                display: contents;
+                            }
+                            th {
+                                // Styles for the cart-subtotal class
+                                @include font($f2, 600, 20px, $black, true);
+                            }
+
+                            td {
+                                // Styles for the cart-subtotal class
+                                @include font($f2, 400, 16px, $black, true);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #payment {
+            &.woocommerce-checkout-payment {
+                // Styles for the woocommerce-checkout-payment class
+
+                ul {
+                    &.wc_payment_methods {
+                        &.payment_methods {
+                            &.methods {
+                                li {
+                                    // Styles for the li element
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .form-row {
+                    &.place-order {
+                        // Styles for the place-order class
+
+                        noscript {
+                            // Styles for the noscript element
+                        }
+
+                        .woocommerce-terms-and-conditions-wrapper {
+                            // Styles for the woocommerce-terms-and-conditions-wrapper class
+                        }
+
+                        button {
+                            &.button {
+                                // Styles for the button class
+                            }
+                        }
+
+                        input {
+                            &.woocommerce-process-checkout-nonce {
+                                // Styles for the woocommerce-process-checkout-nonce class
+                            }
+
+                            &.woocommerce-checkout-update_totals {
+                                // Styles for the woocommerce-checkout-update_totals class
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

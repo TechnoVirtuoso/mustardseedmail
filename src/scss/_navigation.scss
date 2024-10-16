@@ -1,0 +1,175 @@
+.cart-sidebar-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: -webkit-fill-available;
+    z-index: 1000;
+
+    display: none;
+
+    grid-template-columns: 1fr;
+
+    opacity: 0;
+
+    .empty-space {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .cart-sidebar {
+        background-color: white;
+        width: 350px;
+
+        position: absolute;
+        top: 0;
+        right: -350px;
+        height: -webkit-fill-available;
+
+        display: flex;
+        flex-direction: column;
+
+        @include responsive(sm) {
+            width: 100%;
+        }
+
+        .cart-head {
+            padding: 35px;
+            background-color: $black;
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            height: 100px;
+
+            .icon {
+                all: unset;
+                position: absolute;
+                top: 50%;
+                left: 35px;
+
+                font-family: $f1;
+
+                transform: translateY(-50%);
+                color: white;
+
+                cursor: pointer;
+
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+            span {
+                @include font($f1, 400, 23px, white);
+                text-align: center;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        form.cart-form {
+            flex: 1;
+            overflow-y: scroll;
+
+            .shop_table-wrapper {
+                padding: 35px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .cart_item {
+                    display: grid;
+                    grid-template-columns: 80px 1fr;
+                    gap: 20px;
+                    position: relative;
+
+                    padding-bottom: 30px;
+
+                    border-bottom: 1px solid #e8e6e6;
+
+                    .product-field {
+                        &.product-thumbnail {
+                            a {
+                                img {
+                                    width: 100%;
+                                    height: 80px;
+                                }
+                            }
+                        }
+
+                        &.product-quantity {
+                            margin-top: 5px;
+                        }
+
+                        &.product-remove {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            a {
+                                text-decoration: none;
+                            }
+                        }
+
+                        &.product-info {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px;
+
+                            .product-name {
+                                a {
+                                    @include font($f1, 400, 16px, #757575);
+                                    text-decoration: none;
+                                }
+                            }
+
+                            .product-price {
+                                @include font($f1, 600, 16px, $black);
+                            }
+                        }
+
+                        &.product-quantity {
+                            input {
+                                width: 75px;
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .cart-foot {
+            padding: 35px;
+
+            border-top: 1px solid #e8e6e6;
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include font($f1, 400, 20px, black, true);
+            }
+
+            a {
+                padding: 10px 20px;
+                display: block;
+                width: 100%;
+                cursor: pointer;
+                background-color: transparent;
+                border: 1px solid $black;
+                border-radius: 0;
+
+                text-align: center;
+
+                text-decoration: none;
+
+                @include font($f1, 400, 15px, $black);
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+header.site-header {
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    @include responsive(sm) {
+        position: static;
+    }
+    .top-bar {
+        text-align: center;
+        padding: 12px 0;
+        font-family: $f1;
+        background-color: $black;
+        color: white;
+        width: calc(100% - 80px - 80px);
+        margin: 0 auto;
+        font-size: 20px;
+        @include responsive(lg) {
+            width: 100%;
+        }
+    }
+    .logo-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6px 20px;
+        a {
+            img {
+                width: 230px;
+            }
+        }
+        .actions {
+            position: absolute;
+            right: 30px;
+            bottom: 0;
+            @include responsive(sm) {
+                position: static;
+            }
+            .desktop {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                @include responsive(sm) {
+                    margin: 10px 0;
+                }
+                a.login {
+                    color: $yellow;
+                    font-family: $f1;
+                    text-decoration: none;
+                    font-weight: 500;
+                }
+                .cart {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    svg {
+                        width: 50px;
+                    }
+                    path {
+                        fill: $yellow;
+                    }
+                    span {
+                        margin-left: -15px;
+                        background-color: #cc910d;
+                        border-radius: 100%;
+                        color: white;
+                        font-family: courier;
+                        font-size: 12px;
+                        padding: 5px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    hr {
+        width: calc(100% - 160px);
+        border: none;
+        border-top: 1px solid rgb(43, 43, 43);
+    }
+    .nav {
+        display: flex;
+        padding-top: 5px;
+        justify-content: center;
+        gap: 4px;
+        color: $yellow;
+        text-transform: uppercase;
+        font-family: $f1;
+        padding-bottom: 20px;
+        a {
+            color: $yellow;
+            text-decoration: none;
+        }
+
+        @include responsive(sm) {
+            display: none;
+        }
+    }
+    hr {
+        @include responsive(sm) {
+            display: none;
+        }
+    }
+}

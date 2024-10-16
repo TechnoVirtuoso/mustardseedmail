@@ -1,0 +1,35 @@
+/* @import must be at top of file, otherwise CSS will not work */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// brandon-grot-w01-light
+@import url('https://db.onlinewebfonts.com/c/6dd2f2510b4a00a5461b2455928209c2?family=Brandon+Grot+W01+Light');
+
+// Futura_Medium
+@font-face {
+    font-family: 'Futura Medium';
+    src: url('/wp-content/uploads/2024/01/Futura_Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+// Breakpoints Structure
+$custom-breakpoints: (
+    xs: (minSize: 0px, maxSize: 575px, maxContWidth: 0px, name: 'XS'),
+    sm: (minSize: 576px, maxSize: 767px, maxContWidth: 719px, name: 'SM'),
+    md: (minSize: 768px, maxSize: 991px, maxContWidth: 720px, name: 'MD'),
+    lg: (minSize: 992px, maxSize: 1249px, maxContWidth: 960px, name: 'LG'),
+    xl: (minSize: 1250px, maxSize: 1499px, maxContWidth: 1250px, name: 'XL'),
+    max: (minSize: 1500px, maxSize: 0px, maxContWidth: 1201px, name: 'MAX')
+);
+
+$f1: 'Futura Medium'; // Futura Medium
+$f2: $f1;
+$f3: $f1;
+
+// $f2: "Brandon Grot W01 Light"; // brandon-grot-w01-light
+// $f3: "avenir"; // avenir-lt-w01_35-light1475496
+
+$yellow: rgb(204, 145, 13);
+$orange: #F08F1B;
+$black: rgb(43, 43, 43);
